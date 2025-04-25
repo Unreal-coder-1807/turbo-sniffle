@@ -1,8 +1,18 @@
-backend-api/
-├── main.py                   # FastAPI app entry point
-├── models.py                 # Pydantic models for request/response
-├── utils/
-│   ├── face_encoder.py       # Face encoding logic using face_recognition
-│   └── db_manager.py         # Handles SQLite operations
-├── train_dbs/                # Stores train-wise SQLite DBs
-└── requirements.txt          # Dependencies
+backend_api/
+├── __pycache__/
+├── railutils/
+│   ├── __pycache__/
+│   ├── __init__.py               # Makes railutils a Python package
+│   ├── models.py                 # Data models for internal use
+│   ├── db_manager.py             # Handles all database operations
+│   ├── face_encoder.py           # Face encoding and processing logic
+│   └── matcher.py                # Matching encoded faces with database
+├── train_dbs/                    # Directory storing per-train SQLite databases
+├── main.py                       # FastAPI application entry point
+├── models.py                     # Pydantic request/response models
+├── requirements_main.txt         # Dependency file for the backend
+├── streamlit_app.py             # Streamlit app for face recognition interface
+├── streamlit_verify.py          # Streamlit app for face verification interface
+
+.gitignore                        # Git ignored files config
+structure.txt                     # Project structure overview
