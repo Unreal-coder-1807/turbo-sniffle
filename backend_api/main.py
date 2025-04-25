@@ -1,8 +1,8 @@
 from fastapi import FastAPI, File, Form, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from models import PassengerInfo
-from utils.face_encoder import encode_face
-from utils.db_manager import save_passenger
+from rail_utils.face_encoder import encode_face
+from rail_utils.db_manager import save_passenger
 
 app = FastAPI()
 
