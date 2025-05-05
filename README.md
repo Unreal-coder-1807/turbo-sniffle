@@ -1,8 +1,6 @@
 # 🚀🌟 Turbo Sniffle 🌟🚀  
 
-<p align="center">
-  <img src="https://media.giphy.com/media/3o6ZsYm5P38NvUWrDi/giphy.gif" alt="Turbo Sniffle Animation" width="400"/>
-</p>
+
 
 ---
 
