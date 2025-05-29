@@ -65,7 +65,8 @@ if source == "Webcam":
     if captured is not None:
         image_bytes = captured.getvalue()
         image = np.array(Image.open(BytesIO(image_bytes)).convert('RGB'))
-        st.image(image, caption="Captured Image", use_container_width=True)
+        if image is not None:
+            st.image(image, caption="Captured Image")
         st.session_state.captured_frame = image
         st.session_state.processing_started = True
 
@@ -75,7 +76,8 @@ elif source == "Upload from Device":
     if uploaded_file is not None:
         image_bytes = uploaded_file.read()
         image = np.array(Image.open(BytesIO(image_bytes)).convert('RGB'))
-        st.image(image, caption="Uploaded Image", use_container_width=True)
+        if image is not None:
+            st.image(image, caption="Uploaded Image")
         st.session_state.processing_started = True
         st.session_state.captured_frame = image
 
