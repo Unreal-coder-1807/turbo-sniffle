@@ -61,7 +61,7 @@ if source == "Webcam":
     if captured:
         image_bytes = captured.getvalue()
         image = np.array(Image.open(BytesIO(image_bytes)).convert('RGB'))
-        st.image(image, caption="Captured Image", use_container_width=True)
+        st.image(image, caption="Captured Image")
         st.session_state.verify_frame = image
         st.session_state.verify_triggered = True
 
@@ -71,7 +71,7 @@ elif source == "Upload from Device":
     if uploaded_file:
         image_bytes = uploaded_file.read()
         image = np.array(Image.open(BytesIO(image_bytes)).convert('RGB'))
-        st.image(image, caption="Uploaded Image", use_container_width=True)
+        st.image(image, caption="Uploaded Image")
         st.session_state.verify_frame = image
         st.session_state.verify_triggered = True
 
@@ -95,10 +95,10 @@ if st.session_state.verify_triggered and st.session_state.verify_frame is not No
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.image(image, caption="Current Image", use_container_width=True)
+                    st.image(image, caption="Current Image")
                 with col2:
                     stored_image = Image.open(BytesIO(result["image"]))
-                    st.image(stored_image, caption="Matched Record", use_container_width=True)
+                    st.image(stored_image, caption="Matched Record")
 
                 st.markdown(f"""
                 <div style="background-color:#4169e1;padding:10px;border-radius:5px;">
